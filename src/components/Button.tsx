@@ -23,7 +23,9 @@ const Container = styled.div<{ $color: "white" | "black" }>`
   justify-content: space-between;
   gap: 8px;
 
-  padding: 11.5px 16px 11.5px 16px;
+  height: 44px;
+
+  padding: 0 16px;
   border-radius: 24px;
 
   ${({ $color }) =>
@@ -45,7 +47,7 @@ const Content = styled.p`
   align-items: center;
   gap: 48px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 `;
 

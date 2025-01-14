@@ -39,7 +39,7 @@ const Logo = styled.div`
 
 const Title = styled.p`
   font-size: 20px;
-  font-weight: 600px; // 임시
+  font-weight: 500;
 
   align-items: center;
 `;
@@ -48,11 +48,15 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   gap: 48px;
-
-  font-size: 16px;
-  font-weight: 400;
 `;
 
-const Ancker = styled.p``;
+const Ancker = styled.p`
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 export default Header;
