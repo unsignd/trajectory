@@ -6,11 +6,18 @@ interface props {
 
   color?: "white" | "black";
   Icon?: FunctionComponent<React.SVGProps<SVGSVGElement>>;
+
+  onClick?: () => void;
 }
 
-const Button = ({ children, color = "white", Icon }: props) => {
+const Button = ({
+  children,
+  color = "white",
+  Icon,
+  onClick = () => {},
+}: props) => {
   return (
-    <Container $color={color}>
+    <Container $color={color} onClick={onClick}>
       {Icon && <Icon />}
       <Content>{children}</Content>
     </Container>
@@ -27,6 +34,8 @@ const Container = styled.div<{ $color: "white" | "black" }>`
 
   padding: 0 16px;
   border-radius: 24px;
+
+  cursor: pointer;
 
   ${({ $color }) =>
     $color === "white"
